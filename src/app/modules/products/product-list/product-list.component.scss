@@ -1,0 +1,47 @@
+.product-list-container {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+::ng-deep {
+  .dialog-container {
+
+    .mat-mdc-dialog-actions {
+      padding: 0 24px !important;
+      justify-content: flex-end;
+    }
+
+    .mat-mdc-dialog-title+.mat-mdc-dialog-content {
+      padding-bottom: 0;
+    }
+  }
+
+  .product-list-container {
+    .mat-mdc-table {
+      .mat-mdc-header-cell {
+        text-transform: capitalize;
+
+        &:nth-child(1),
+        &:nth-child(5) {
+          width: 50px !important;
+          min-width: 50px !important;
+        }
+
+        &:nth-child(2) {
+          width: 150px !important;
+        }
+
+        &:nth-child(3) {
+          width: auto !important;
+        }
+
+        &:nth-child(4) {
+          width: 150px !important;
+        }
+      }
+    }
+  }
+}

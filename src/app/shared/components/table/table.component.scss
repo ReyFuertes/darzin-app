@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+::ng-deep {
+  .mat-mdc-table {
+    .mat-mdc-header-cell {
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        min-width: 150px;
+      }
+
+      &:last-child {
+        width: 100px;
+      }
+    }
+  }
+}

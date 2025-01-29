@@ -1,0 +1,12 @@
+<div class="customer-list-container">
+  <app-page-list>
+    <div class="header">
+      <h2>Customer List</h2>
+      <button mat-raised-button (click)="onAdd()">Add Customer</button>
+    </div>
+    <div class="content">
+      <app-table [data]="customers" [columns]="columns" (onEditEmitter)="onEdit($event)"
+        (onViewEmitter)="onView($event)" (onDeleteEmitter)="onDelete($event)"></app-table>
+    </div>
+  </app-page-list>
+</div>

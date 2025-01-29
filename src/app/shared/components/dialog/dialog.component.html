@@ -1,0 +1,16 @@
+<div class="dialog-container">
+  <h2 mat-dialog-title>{{ data?.title }}</h2>
+  <mat-dialog-content>
+    <ng-container [ngSwitch]="data?.type">
+      <app-customer-detail *ngSwitchCase="1" [data]="data" (formEmitter)="formData = $event"></app-customer-detail>
+      <app-product-detail *ngSwitchCase="2" [data]="data" (formEmitter)="formData = $event"></app-product-detail>
+      <app-customer-purchases *ngSwitchCase="3" [data]="data"
+        (formEmitter)="formData = $event"></app-customer-purchases>
+      <app-customer-purchase *ngSwitchCase="4" [data]="data" (formEmitter)="formData = $event"></app-customer-purchase>
+    </ng-container>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button [disabled]="!formData?.valid" mat-raised-button (click)="dialogRef.close(formData)">Save</button>
+    <button mat-raised-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,14 @@
+<div class="product-detail-container" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input type="text" matInput formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input type="number" matInput formControlName="price">
+  </mat-form-field>
+</div>

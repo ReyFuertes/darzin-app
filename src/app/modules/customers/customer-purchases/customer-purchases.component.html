@@ -1,0 +1,6 @@
+<div class="customer-purchases-container">
+  <div class="header">
+    <button mat-raised-button (click)="onAdd()">Add Purchase</button>
+  </div>
+  <app-table [data]="customersPurchases" [columns]="columns" (onDeleteEmitter)="onDelete($event)"></app-table>
+</div>

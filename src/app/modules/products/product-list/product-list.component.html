@@ -1,0 +1,12 @@
+<div class="product-list-container">
+  <app-page-list>
+    <div class="header">
+      <h2>Product List</h2>
+      <button mat-raised-button (click)="onAdd()">Add Product</button>
+    </div>
+    <div class="content">
+      <app-table [data]="products" [columns]="columns" (onEditEmitter)="onEdit($event)"
+        (onDeleteEmitter)="onDelete($event)"></app-table>
+    </div>
+  </app-page-list>
+</div>

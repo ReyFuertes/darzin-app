@@ -1,0 +1,23 @@
+
+
+::ng-deep {
+  .top-nav-container {
+    .mat-toolbar {
+      span {
+        padding: 8px;
+        margin-right: 8px;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #eeeeee;
+          cursor: pointer;
+        }
+
+        &.active {
+          background-color: #dddddd;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

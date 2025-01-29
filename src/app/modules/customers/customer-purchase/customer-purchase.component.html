@@ -1,0 +1,8 @@
+<div class="customer-purchase-container" [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Products</mat-label>
+    <mat-select formControlName="productId">
+      <mat-option *ngFor="let product of products" [value]="product?.id">{{product?.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
